@@ -14,7 +14,7 @@ namespace DevMath
 
 		public float Magnitude
 		{
-			get { return (x * x + y * y); }
+			get { return (float)Math.Sqrt(x * x + y * y); }
 		}
 
 		public Vector2 Normalized
@@ -51,6 +51,8 @@ namespace DevMath
 
 		public static Vector2 DirectionFromAngle(float angle)
 		{
+			//Vector2 north = new Vector2(0, -1);
+			//double radians = angle / 180 * Math.PI;
 			throw new NotImplementedException();
 		}
 

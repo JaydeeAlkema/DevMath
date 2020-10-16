@@ -15,7 +15,7 @@ namespace DevMath
 
 		public float Magnitude
 		{
-			get { return (x * x + y * y + z * z + w * w); }
+			get { return (float)Math.Sqrt(x * x + y * y + z * z + w * w); }
 		}
 
 		public Vector4 Normalized
