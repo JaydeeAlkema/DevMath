@@ -40,20 +40,14 @@ namespace DevMath
 
 		public static float Angle(Vector2 lhs, Vector2 rhs)
 		{
-			Vector2 delta = new Vector2(lhs.x - rhs.x, lhs.y - rhs.y);
-
-			double angleRadians = Math.Atan2(delta.y, delta.x);
-
-			double angleDegrees = angleRadians * DevMath.RadToDeg((float)angleRadians);
-
-			return (float)angleDegrees;
+			Vector2 v = lhs - rhs;
+			return DevMath.RadToDeg((float)Math.Atan2(v.x, v.y));
 		}
 
 		public static Vector2 DirectionFromAngle(float angle)
 		{
-			//Vector2 north = new Vector2(0, -1);
-			//double radians = angle / 180 * Math.PI;
-			throw new NotImplementedException();
+			double rad = DevMath.DegToRad(angle);
+			return new Vector2((float)Math.Cos(rad), (float)Math.Sin(rad));
 		}
 
 		public static Vector2 operator +(Vector2 lhs, Vector2 rhs)
