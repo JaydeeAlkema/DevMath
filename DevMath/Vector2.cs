@@ -41,7 +41,7 @@ namespace DevMath
 		public static float Angle(Vector2 lhs, Vector2 rhs)
 		{
 			Vector2 v = lhs - rhs;
-			return DevMath.RadToDeg((float)Math.Atan2(v.x, v.y));
+			return -(float)Math.Atan2(v.x, v.y);
 		}
 
 		public static Vector2 DirectionFromAngle(float angle)
