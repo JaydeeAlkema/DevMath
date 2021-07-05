@@ -40,7 +40,7 @@ namespace DevMath
 
 		public static float Angle(Vector2 lhs, Vector2 rhs)
 		{
-			Vector2 v = lhs - rhs;
+			Vector2 v = rhs - lhs;
 			return (float)Math.Atan2(v.y, v.x);
 		}
 
